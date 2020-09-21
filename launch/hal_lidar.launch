@@ -1,0 +1,3 @@
+<launch>
+  <include file="$(find hal_lidar)/launch/bumper_front_lidar.launch" />
+</launch>

@@ -1,0 +1,16 @@
+<launch>
+  <arg name="lidar_topic" default="/bumper/front/lidar" />
+  <arg name="imu_topic" default="/bumper/front/lidar_imu" />
+  <arg name="frame_id" default="bumper_front_lidar_link" />
+
+	<arg name="user_config_path" default="$(find hal_lidar)/config/bumper_front_lidar_config.json"/>
+  <arg name="xfer_format" default="2" />
+  
+  <include file="$(find livox_ros_driver)/launch/livox_lidar.launch">
+    <arg name="lidar_topic" default="$(arg lidar_topic)" />
+    <arg name="imu_topic" default="$(arg imu_topic)" />
+    <arg name="msg_frame_id" default="$(arg frame_id)" />
+    <arg name="user_config_path" default="$(arg user_config_path)" />
+    <arg name="xfer_format" default="$(arg xfer_format)" />
+  </include>
+</launch>
