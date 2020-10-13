@@ -1,3 +1,7 @@
 <launch>
-  <include file="$(find hal_lidar)/launch/bumper_front_lidar.launch" />
+  <arg name="xfer_format" default="2" />
+
+  <include file="$(find hal_lidar)/launch/bumper_front_lidar.launch" >
+    <arg name="xfer_format" default="$(arg xfer_format)" />
+  </include>
 </launch>
