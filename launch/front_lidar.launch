@@ -1,9 +1,9 @@
 <launch>
-  <arg name="lidar_topic" default="/bumper/front/lidar" />
-  <arg name="imu_topic" default="/bumper/front/lidar_imu" />
-  <arg name="frame_id" default="bumper_front_lidar_link" />
+  <arg name="lidar_topic" default="/agribot/obstacle_detection/front/3d/lidar/point_cloud" />
+  <arg name="imu_topic" default="/agribot/obstacle_detection/front/3d/lidar/imu" />
+  <arg name="frame_id" default="front_lidar_link" />
 
-	<arg name="user_config_path" default="$(find hal_lidar)/config/bumper_front_lidar_config.json"/>
+	<arg name="user_config_path" default="$(find hal_lidar)/config/front_lidar_config.json"/>
   <arg name="xfer_format" default="2" />
   
   <include file="$(find livox_ros_driver)/launch/livox_lidar.launch">
